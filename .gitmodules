@@ -1,0 +1,3 @@
+[submodule "base-dev/chef-repo"]
+	path = base-dev/chef-repo
+	url = https://github.com/nise-nabe/chef-repo.git
