@@ -2,6 +2,7 @@ FROM nise_nabe/base-chef
 MAINTAINER nise_nabe <nise.nabe@gmail.com>
 
 RUN apt-get update
+RUN apt-get --yes upgrade
 
 ADD chef-repo /opt/nise_nabe/chef-repo
 ADD solo.rb /opt/nise_nabe/chef-repo/solo.rb
