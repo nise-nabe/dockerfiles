@@ -1,4 +1,4 @@
-FROM nise_nabe/debian:wheezy
+FROM debian:wheezy
 MAINTAINER nise_nabe <nise.nabe@gmail.com>
 
 RUN apt-get update
