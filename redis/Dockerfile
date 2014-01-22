@@ -1,5 +1,5 @@
 FROM debian
 
-RUN apt-et -y --force-yes install redis-server
+RUN apt-get -y --force-yes install redis-server
 
 CMD redis-server
