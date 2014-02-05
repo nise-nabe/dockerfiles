@@ -9,3 +9,6 @@ RUN echo "deb http://packages.groonga.org/debian/ wheezy main\ndeb-src http://pa
   && apt-get -qq update \
   && apt-get -y install groonga groonga-tokenizer-mecab \
   && apt-get clean
+
+EXPOSE 10041
+CMD groonga -d --protocol http -n /tmp/groonga.db && tail -f /dev/null
