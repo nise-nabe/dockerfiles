@@ -1,0 +1,10 @@
+FROM debian
+
+RUN apt-get -qq update && apt-get -y upgrade
+
+RUN apt-get install -y rubygems libsqlite3-dev
+RUN gem install mailcatcher --no-ri --no-rdoc
+
+EXPOSE 1080
+EXPOSE 1025
+CMD mailcatcher --ip `ip addr show dev eth0 scope global | grep inet | awk '{print $2;}' | cut -d/ -f1` -f
