@@ -6,5 +6,5 @@ RUN apt-get install -y rubygems libsqlite3-dev
 RUN gem install mailcatcher --no-ri --no-rdoc
 
 EXPOSE 1080
-EXPOSE 1025
-CMD mailcatcher --ip `ip addr show dev eth0 scope global | grep inet | awk '{print $2;}' | cut -d/ -f1` -f
+EXPOSE 25
+CMD mailcatcher --smtp-port 25 --ip `ip addr show dev eth0 scope global | grep inet | awk '{print $2;}' | cut -d/ -f1` -f
